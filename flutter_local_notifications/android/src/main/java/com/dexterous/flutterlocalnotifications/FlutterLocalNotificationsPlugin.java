@@ -1674,8 +1674,12 @@ public class FlutterLocalNotificationsPlugin
     Map<String, Object> arguments = call.arguments();
     NotificationDetails notificationDetails = extractNotificationDetails(result, arguments);
     if (notificationDetails != null) {
-      showNotification(applicationContext, notificationDetails);
-      result.success(null);
+      try {
+          showNotification(applicationContext, notificationDetails);
+          result.success(null);
+      } catch (IllegalStateException e) {
+          result.error("ILLEGAL_STATE", e.getMessage(), null);
+      }
     }
   }
 
