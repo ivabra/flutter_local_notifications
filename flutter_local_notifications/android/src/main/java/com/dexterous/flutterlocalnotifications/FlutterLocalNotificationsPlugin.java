@@ -1677,8 +1677,8 @@ public class FlutterLocalNotificationsPlugin
       try {
           showNotification(applicationContext, notificationDetails);
           result.success(null);
-      } catch (IllegalStateException e) {
-          result.error("ILLEGAL_STATE", e.getMessage(), null);
+      } catch (RuntimeException e) {
+          result.error("RUNTIME_ERROR", e.getMessage(), null);
       }
     }
   }
