@@ -1,4 +1,8 @@
-## [11.0.0-dev.1]
+## [12.0.0-dev.1]
+
+* Added `zonedScheduled()` to the platform interface and moved `DateTimeComponents` from main plugin to platform interface. Thanks to the PR from [Gaurav Yadav](https://github.com/Gaurav-CareMonitor)
+
+## [11.0.0]
 
 * **Breaking change** bumped minimum Flutter SDK requirement to 3.38.1 and Dart SDK requirement to 3.10.0
 
